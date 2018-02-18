@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 105%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+.page {
+    overflow: hidden;
+    position: static;
+    text-align: center;
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-bottom: 0px;
+}
+
+.background {
+    position: absolute;
+    height: 100%;
+    width: auto;
+    left: 50%;
+    top: 0px;
+    transform: translateX(-50%) translateY(0%);
+    z-index: -1;
+}
+
+.coins {
+    position: absolute;
+}
+
+.bubble {
+    position: absolute;
+    background-image: url(images/bubble.png);
+    width: 228px;
+    height: 267px;
+}

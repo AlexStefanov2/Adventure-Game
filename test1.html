@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <script>
+
+        function myFunc() {
+            document.getElementById('stuff').innerHTML = "<br>" + window.innerWidth;
+            document.getElementById('stuff').innerHTML += "<br>" + window.innerHeight;
+        }
+
+        window.onresize = myFunc;
+
+    </script>
+    </head>
+    <body onload="myFunc();">
+        <div id='stuff'>
+            random message
+        </div>
+    </body>
+</html>

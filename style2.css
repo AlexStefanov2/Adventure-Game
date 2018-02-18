@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 105%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+.page {
+    position: relative;
+    text-align: left;
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-bottom: 0px;
+}
+
+.character {
+    position: absolute;
+    top: 63%;
+    left: 630px;
+}
+
+.text {
+    position: absolute;
+    top: 43%;
+    left: 730px;
+}

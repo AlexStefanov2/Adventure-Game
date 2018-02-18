@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Adventure Game</title>
+        <link rel="stylesheet" href="style3.css">
+        <script>
+
+function myFunc() {
+    var hi = 655; // height and width of background image
+    var wi = 2026; //
+
+    // calculate multiplication factor
+    var f = window.innerHeight / hi; // 655 = height of background image
+
+    // calculate how much is cut off from the left
+    var dw = (f * wi - window.innerWidth) / 2;
+
+    // position the pile of coins
+    var coins = document.getElementById('coins');
+    var perX = .6; // position of coins in percentages
+    var perY = .8; // 
+    coins.style.left = (wi * f * perX - dw) +'px';
+    coins.style.top = (hi * f * perY) +'px';
+
+    // position speech bubble of captain
+    var bubble = document.getElementById('bubble');
+    var perX = .26;
+    var perY = .21;
+    bubble.style.left = (wi * f * perX - dw) +'px';
+    bubble.style.top = (hi * f * perY) +'px';
+
+
+}
+window.onresize = myFunc;
+
+function getCoins() {
+    // hide pile of coins
+    document.getElementById('coins').innerHTML = "";
+    
+    // change speech bubble of sailor
+    document.getElementById('reply').innerHTML = "<a href='page4.html'> - Here's your 10 gold!";
+}
+
+        </script>
+    </head>
+
+    <body onload="myFunc();" class="page" id="page" style="min-height: 100px">
+        <img src="images/town.png" class="background" alt="Something went wrong. Whoops." />
+
+        <a onclick="getCoins();" href="#" id="coins" class="coins">
+            <img src="images/coins.png" alt="A pile of gold coins"/>
+        </a>
+
+        <div id="bubble" class="bubble">
+            <p style="padding-top: 10px">
+            Hello, adventurer!
+            <br>
+            Seems like there
+            <br>
+            isn't that much work
+            <br>
+            for you here.
+            <br>
+            Want me  to transport
+            <br>
+            you to the big city?
+            <br>
+            That will cost 10 gold.
+            <br><br>
+            </p>
+
+            <div id="reply">
+                - Here's your 10 gold! <br>
+                { Not enough gold }
+            </div>
+        </div>
+    </body>
+</html>
