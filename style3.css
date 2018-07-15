@@ -34,6 +34,9 @@
 .bubble {
     position: absolute;
     background-image: url(images/bubble.png);
+    background-size: 100% 96%;
+    background-repeat: no-repeat;
+    overflow: none;
     width: 228px;
-    height: 267px;
+    height: auto;
 }
